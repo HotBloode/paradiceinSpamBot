@@ -161,6 +161,12 @@ namespace paradiceinSpamBot
         {
             while (true)
             {
+                wagered = 0;
+                profit = 0;
+                wins = 0;
+                losses = 0;
+                statistic = "";
+
                 GenerateCurrency();
                 GenerateStatistic();
 
@@ -176,6 +182,7 @@ namespace paradiceinSpamBot
                 GoPost();
 
                 //пропихнуть проверку на отправку запроса
+
                 spamCount++;
                 InfOut();
                 Thread.Sleep(pause*60000);

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:paradiceinSpamBot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="147.2" Width="313.2">
+        Title="MainWindow" Height="164" Width="313.2">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="Start" Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBox x:Name="baseBet" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="0,00000001" VerticalAlignment="Top" Width="120" UndoLimit="0" PreviewTextInput="TextBox_PreviewTextInput_1" PreviewKeyDown="TextBox_PreviewKeyDown_1"/>
         <TextBox x:Name="maxRand" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="250" VerticalAlignment="Top" Width="120" PreviewTextInput="TextBox_PreviewTextInput" PreviewKeyDown="TextBox_PreviewKeyDown"/>
         <CheckBox x:Name="BTC" Content="BTC" HorizontalAlignment="Left" Margin="240,12,0,0" VerticalAlignment="Top"/>
@@ -23,6 +23,7 @@
         <Label Content="Spam evry min:" HorizontalAlignment="Left" Margin="90,70,0,0" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.555,1.71" FontSize="11"/>
         <TextBlock x:Name="countB" HorizontalAlignment="Left" Margin="175,76,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" RenderTransformOrigin="-0.139,3.088" Width="21"/>
         <TextBlock x:Name="info" HorizontalAlignment="Left" Margin="194,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+        <Button x:Name="Stop" Content="Stop" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="Stop_Click"/>
 
 
     </Grid>

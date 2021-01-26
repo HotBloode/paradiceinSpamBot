@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -29,6 +30,7 @@ namespace paradiceinSpamBot
             InitializeComponent();
         }
 
+        private Controller c;
         private void Addсurrency()
         {
             if (BTC.IsChecked.Value)
@@ -70,8 +72,13 @@ namespace paradiceinSpamBot
             }
             else
             {
-                Controller c = new Controller(info, Convert.ToDouble(baseBet.Text),Convert.ToInt32(maxRand.Text),Convert.ToInt32(countB.Text), сurrencyList);
-                c.Start();
+                c = new Controller(info, Convert.ToDouble(baseBet.Text),Convert.ToInt32(maxRand.Text),Convert.ToInt32(countB.Text), сurrencyList);
+
+                if (c.Start())
+                {
+                    Start.IsEnabled = false;
+                    Stop.IsEnabled = true;
+                }
             }
             
         }
@@ -152,6 +159,12 @@ namespace paradiceinSpamBot
                 count = 5;
                 countB.Text = count.ToString();
             }
+        }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            Start.IsEnabled = true;
+            Stop.IsEnabled = false;
         }
     }
 }
